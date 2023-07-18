@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart list project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <!-- logo and text -->
+            <div class="logo">
+                <img src="/images/cart&letters.png" alt="cart-image">
+                    <h1> Shopping list</h1>
+            </div>
+            
+
+            <!-- form and inputs -->
+            <form class="form">
+                <input class="enter-item" type="text" placeholder="Enter Item">
+                <select name="Select-priority" id="priority">
+                    <option value="0"> Select Priority</option>
+                    <option value="1"> 1</option>
+                    <option value="2"> 2</option>
+                    <option value="3"> 3</option>
+                </select>
+                <input class="btn dark-btn" type="submit" value="+ Add Item">
+                <input class="filter" type="text" placeholder="Filter Items">
+            </form>
+
+            <!-- list and content -->
+            <div class="content">
+                <ul class="item-list">
+                    <li class="item">Apples<i class="fa-solid fa-xmark"></i></li>
+                    <li class="item">Avocados<i class="fa-solid fa-xmark"></i></li>
+                    <li class="item">Bananas<i class="fa-solid fa-xmark"></i></li>
+                    <li class="item">Chicken breast<i class="fa-solid fa-xmark"></i></li>
+                    <li class="item">Hot Seazoning<i class="fa-solid fa-xmark"></i></li>
+                </ul>
+            </div>
+
+            <input class="clear-btn dark-btn" type="submit"  value="Clear All">
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

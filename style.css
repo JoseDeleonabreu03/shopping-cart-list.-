@@ -1,0 +1,122 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #d3d3d3;
+}
+
+/* utility classes */
+
+.dark-btn {
+    background-color: black;
+    color: white;
+}
+
+/* logo styling */
+
+.logo {
+    margin: 0px 0px;
+}
+
+img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+h1 {
+    display: inline-block;
+}
+
+/* center content */
+
+.wrapper {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    
+}
+
+
+.container {
+    max-height: 90%;
+    max-width: 90%;
+    padding: 20px;
+}
+
+/* Form styling */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+
+.form input, .form select {
+    margin: 10px 0px;
+    font-size: 1.3rem;
+    border: none;
+}
+
+.form .btn {
+    box-shadow: 1px 1px 1px grey inset;
+}
+.form .btn:active {
+    box-shadow: 1px 1px 1px grey ;
+}
+
+.form .filter {
+    background: #d3d3d3;
+    border-bottom: 1px solid black ;
+}
+
+.form .filter:focus {
+    outline: none;
+}
+
+.form .btn {
+    border-radius: 5px;
+    width: fit-content;
+    padding: 5px 10px;
+}
+
+/* list items styling */
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    align-items: center;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.item-list .item i {
+    color: orangered;
+}
+
+
+.clear-btn {
+    min-width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 20px
+}
+
+
