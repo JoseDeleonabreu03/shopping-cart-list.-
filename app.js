@@ -3,6 +3,7 @@ let btn = document.querySelector('.btn');
 let itemList = document.querySelector('.item-list');
 let clearBtn = document.querySelector('.clear-btn');
 let filter = document.querySelector('.filter')
+let isEditMode = false;
 
 
 function display(){
@@ -22,6 +23,15 @@ function onAddItemSubmit(e){
         alert('Please, enter an item to add to the list.')
         return;
     } else {
+        // check for edit mode
+        if(isEditMode){
+            const itemToEdit = itemList.querySelector('.edit-mode')
+            removeItemFromStorage(itemToEdit.textContent);
+            itemToEdit.classList.remove('edit-mode')
+            itemToEdit.remove()
+            isEditMode = false;
+        }
+
         // this is where the element gets created and added to the list items. 
 
         createElement(newItem);
@@ -72,6 +82,8 @@ function createX(classes){
 function onClickItem(e){
     if(e.target.className == 'fa-solid fa-xmark'){
         deleteItem(e.target)
+    } else {
+        setItemToEdit(e.target)
     }
 }
 
@@ -86,6 +98,24 @@ function deleteItem(item){
 
         checkUI()
     }
+}
+
+// set Item to edit function
+
+function setItemToEdit(item){
+
+    itemList.querySelectorAll('li').forEach(function(item){
+        item.style.color = 'black'
+        item.classList.remove('edit-mode')
+    })
+    
+    isEditMode = true;
+    item.style.color = '#ccc'
+    item.classList.add('edit-mode')
+    btn.value = 'Update form'
+    btn.style.backgroundColor = '#228b22'
+    enterItem.value = item.textContent;
+
 }
 
 
@@ -116,6 +146,7 @@ function addToLocalStorage(item){
 
 // check UI 
 function checkUI(){
+    enterItem.value = ''
     let items = document.querySelectorAll('.item')
     if(items.length == 0) {
         filter.style.display = 'none'
@@ -124,6 +155,9 @@ function checkUI(){
         filter.style.display = 'block'
         clearBtn.style.display = 'block'
     }
+    btn.value = '+ Add Item'
+    btn.style.backgroundColor = 'black'
+    isEditMode = false;
 }
 
 // filter items 

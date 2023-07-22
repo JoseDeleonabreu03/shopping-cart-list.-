@@ -16,6 +16,10 @@ body {
     color: white;
 }
 
+.edit-move {
+    color: #ccc;
+}
+
 /* logo styling */
 
 .logo {
